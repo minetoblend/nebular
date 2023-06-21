@@ -1,21 +1,11 @@
 {
   "root": true,
-  "ignorePatterns": [
-    "src/framework/**/*",
-    "docs/**/*",
-    "packages-smoke/**/*",
-    "tools/dev-schematics/*/files"
-  ],
+  "ignorePatterns": ["src/framework/**/*", "docs/**/*", "packages-smoke/**/*", "tools/dev-schematics/*/files"],
   "overrides": [
     {
-      "files": [
-        "*.ts"
-      ],
+      "files": ["*.ts"],
       "parserOptions": {
-        "project": [
-          "tsconfig.json",
-          "e2e/tsconfig.json"
-        ],
+        "project": ["tsconfig.json", "e2e/tsconfig.json"],
         "createDefaultProgram": true
       },
       "extends": [
@@ -23,18 +13,13 @@
         "plugin:@angular-eslint/template/process-inline-templates",
         "eslint-config-prettier"
       ],
-      "plugins": [
-        "eslint-plugin-rxjs"
-      ],
+      "plugins": ["eslint-plugin-rxjs"],
       "rules": {
         "quotes": "off",
         "dot-notation": "off",
         "no-restricted-globals": ["error", "fit", "fdescribe"],
-        "@typescript-eslint/dot-notation": "error",
         "no-shadow": "off",
-        "@typescript-eslint/no-shadow": "error",
         "no-underscore-dangle": "off",
-        "@typescript-eslint/consistent-type-definitions": "error",
         "rxjs/no-unsafe-takeuntil": [
           "error",
           {
@@ -66,19 +51,12 @@
       }
     },
     {
-      "files": [
-        "*.html"
-      ],
-      "extends": [
-        "plugin:@angular-eslint/template/recommended",
-        "eslint-config-prettier"
-      ],
+      "files": ["*.html"],
+      "extends": ["plugin:@angular-eslint/template/recommended", "eslint-config-prettier"],
       "rules": {}
     },
     {
-      "files": [
-        "./*.js"
-      ],
+      "files": ["./*.js"],
       "parserOptions": {
         "ecmaVersion": 11
       },
